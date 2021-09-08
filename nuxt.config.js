@@ -64,13 +64,13 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/main.pcss', 'swiper/css/swiper.css'],
+  css: ['@/assets/css/main.pcss'],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     '~/plugins/vue-content-placeholders.js',
-    { src: '@/plugins/vue-awesome-swiper', mode: 'client' },
+    { src: '@/plugins/vue-awesome-swiper', ssr: false },
     { src: '@/plugins/vue-carousel-3d', mode: 'client' },
   ],
 

@@ -17,9 +17,9 @@
   "dependencies": {
     "@nuxt/content": "^1.14.0",
     "nuxt": "^2.15.8",
-    "swiper": "^5.4.5",
-    "vue-awesome-swiper": "^4.1.1",
-    "vue-carousel-3d": "^1.0.1",
+    "swiper": "5.4.5",
+    "vue-awesome-swiper": "4.1.1",
+    "vue-carousel-3d": "1.0.1",
     "vue-cli": "^2.9.6",
     "vue-masonry-wall": "^0.3.2"
   },
