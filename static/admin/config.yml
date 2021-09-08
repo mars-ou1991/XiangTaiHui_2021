@@ -52,6 +52,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+
   - name: 'projects'
     label: 'Projects'
     label_singular: 'Project'
@@ -60,6 +61,180 @@ collections:
     format: 'frontmatter'
     slug: '{{slug}}'
     preview_path: 'projects/{{slug}}'
+    fields:
+      - {
+          label: 'Project Category',
+          name: 'category',
+          widget: 'select',
+          default: 'animals',
+          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
+        }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - {
+          label: 'Gallery',
+          name: 'gallery',
+          widget: 'list',
+          required: false,
+          summary: '{{fields.image}}',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+
+  - name: 'news'
+    label: 'news'
+    label_singular: 'Project'
+    folder: 'content/news'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'news/{{slug}}'
+    fields:
+      - {
+          label: 'Project Category',
+          name: 'category',
+          widget: 'select',
+          default: 'animals',
+          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
+        }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - {
+          label: 'Gallery',
+          name: 'gallery',
+          widget: 'list',
+          required: false,
+          summary: '{{fields.image}}',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+
+  - name: 'yuelu-history'
+    label: 'yuelu-history'
+    label_singular: 'Project'
+    folder: 'content/yuelu-history'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'yuelu-history/{{slug}}'
+    fields:
+      - {
+          label: 'Project Category',
+          name: 'category',
+          widget: 'select',
+          default: 'animals',
+          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
+        }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - {
+          label: 'Gallery',
+          name: 'gallery',
+          widget: 'list',
+          required: false,
+          summary: '{{fields.image}}',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+
+  - name: 'cooperation-zone'
+    label: 'cooperation-zone'
+    label_singular: 'Project'
+    folder: 'content/cooperation-zone'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'cooperation-zone/{{slug}}'
+    fields:
+      - {
+          label: 'Project Category',
+          name: 'category',
+          widget: 'select',
+          default: 'animals',
+          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
+        }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - {
+          label: 'Gallery',
+          name: 'gallery',
+          widget: 'list',
+          required: false,
+          summary: '{{fields.image}}',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+
+  - name: 'originator'
+    label: 'originator'
+    label_singular: 'Project'
+    folder: 'content/originator'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'originator/{{slug}}'
+    fields:
+      - {
+          label: 'Project Category',
+          name: 'category',
+          widget: 'select',
+          default: 'animals',
+          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
+        }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - {
+          label: 'Gallery',
+          name: 'gallery',
+          widget: 'list',
+          required: false,
+          summary: '{{fields.image}}',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+
+  - name: 'important-person'
+    label: 'important-person'
+    label_singular: 'Project'
+    folder: 'content/important-person'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'important-person/{{slug}}'
+    fields:
+      - {
+          label: 'Project Category',
+          name: 'category',
+          widget: 'select',
+          default: 'animals',
+          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
+        }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - {
+          label: 'Gallery',
+          name: 'gallery',
+          widget: 'list',
+          required: false,
+          summary: '{{fields.image}}',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+
+  - name: 'scene'
+    label: 'scene'
+    label_singular: 'Project'
+    folder: 'content/scene'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'scene/{{slug}}'
     fields:
       - {
           label: 'Project Category',
