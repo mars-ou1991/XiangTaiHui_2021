@@ -86,7 +86,7 @@ export default {
   },
   async mounted() {
     this.loading = true
-    this.posts = await this.fetchPosts()
+    this.posts = await this.fetchPosts('news')
     this.news = await this.fetchPosts('blog')
     this.loading = false
   },

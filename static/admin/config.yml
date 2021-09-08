@@ -83,7 +83,7 @@ collections:
         }
 
   - name: 'news'
-    label: 'news'
+    label: '新闻'
     label_singular: 'Project'
     folder: 'content/news'
     create: true
@@ -96,7 +96,7 @@ collections:
           name: 'category',
           widget: 'select',
           default: 'animals',
-          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
+          options: [{ label: '头条新闻', value: 'topNews' }, { label: '活动报道', value: 'eventNews' }, { label: '媒体报道', value: 'news' }],
         }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
@@ -112,7 +112,7 @@ collections:
         }
 
   - name: 'yuelu-history'
-    label: 'yuelu-history'
+    label: '岳麓山文史'
     label_singular: 'Project'
     folder: 'content/yuelu-history'
     create: true
@@ -120,13 +120,6 @@ collections:
     slug: '{{slug}}'
     preview_path: 'yuelu-history/{{slug}}'
     fields:
-      - {
-          label: 'Project Category',
-          name: 'category',
-          widget: 'select',
-          default: 'animals',
-          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
-        }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
@@ -141,7 +134,7 @@ collections:
         }
 
   - name: 'cooperation-zone'
-    label: 'cooperation-zone'
+    label: '合作区'
     label_singular: 'Project'
     folder: 'content/cooperation-zone'
     create: true
@@ -149,13 +142,6 @@ collections:
     slug: '{{slug}}'
     preview_path: 'cooperation-zone/{{slug}}'
     fields:
-      - {
-          label: 'Project Category',
-          name: 'category',
-          widget: 'select',
-          default: 'animals',
-          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
-        }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
@@ -170,7 +156,7 @@ collections:
         }
 
   - name: 'originator'
-    label: 'originator'
+    label: '发起人'
     label_singular: 'Project'
     folder: 'content/originator'
     create: true
@@ -178,13 +164,6 @@ collections:
     slug: '{{slug}}'
     preview_path: 'originator/{{slug}}'
     fields:
-      - {
-          label: 'Project Category',
-          name: 'category',
-          widget: 'select',
-          default: 'animals',
-          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
-        }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
@@ -199,7 +178,7 @@ collections:
         }
 
   - name: 'important-person'
-    label: 'important-person'
+    label: '大咖'
     label_singular: 'Project'
     folder: 'content/important-person'
     create: true
@@ -207,13 +186,6 @@ collections:
     slug: '{{slug}}'
     preview_path: 'important-person/{{slug}}'
     fields:
-      - {
-          label: 'Project Category',
-          name: 'category',
-          widget: 'select',
-          default: 'animals',
-          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
-        }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
@@ -228,7 +200,7 @@ collections:
         }
 
   - name: 'scene'
-    label: 'scene'
+    label: '现场'
     label_singular: 'Project'
     folder: 'content/scene'
     create: true
@@ -236,13 +208,6 @@ collections:
     slug: '{{slug}}'
     preview_path: 'scene/{{slug}}'
     fields:
-      - {
-          label: 'Project Category',
-          name: 'category',
-          widget: 'select',
-          default: 'animals',
-          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
-        }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }

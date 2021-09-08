@@ -213,7 +213,6 @@ export default {
         }
       }
       this.active = navIndex
-      console.log(offsetTopArr)
     },
     // 跳转到指定索引的元素
     scrollTo(index, close) {
