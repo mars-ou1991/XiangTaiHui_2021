@@ -31,11 +31,14 @@
     </div>
     <div class="">
       <ul class="">
-        <li v-for="(item, index) in posts" :key="index" class="px-4 py-2 mb-2 bg-gray-100">
+        <li v-for="(item, index) in posts" :key="index" class="px-4 py-2 mb-3 bg-gray-100">
           <h3 class="truncate">
             <a href="" class="text-blue-700">{{ item.title }}</a>
           </h3>
           <p class="mt-1 dark:text-primary-400 mb-0 truncate">{{ item.description }}</p>
+        </li>
+        <li class="px-4 py-2 mb-2 bg-gray-100">
+          <nuxt-link to="" class="mt-1 dark:text-primary-400 mb-0 truncate">查看更多>></nuxt-link>
         </li>
       </ul>
     </div>
