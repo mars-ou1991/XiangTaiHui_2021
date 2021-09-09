@@ -9,8 +9,8 @@
           >
             <div class="bg-gradient-to-t px-4 py-3 pt-10 absolute bottom-0 from-blue-900 via-blue-900 w-full">
               <h3 class="text-white">{{ post.title }}</h3>
-              <div class="bg-gradient-to-r from-blue-300 h-1 w-1/2"></div>
-              <p class="mt-1 text-white dark:text-primary-400 mb-0">{{ post.description }}</p>
+              <!-- <div class="bg-gradient-to-r from-blue-300 h-1"></div> -->
+              <p class="mt-1 text-white dark:text-primary-400 mb-0 truncate">{{ post.description }}</p>
             </div>
           </article>
         </swiper-slide>
