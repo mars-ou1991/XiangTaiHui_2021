@@ -27,51 +27,44 @@
       <div class="hidden md:block">
         <ul class="flex space-x-8 text-sm font-sans">
           <li :class="{ active: active === 0 }" @click="scrollTo(0)" class="flex-auto">
-            <a href="#">首页</a>
+            <span class="text-lg">首页</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
           <li :class="{ active: active === 1 }" @click="scrollTo(1)" class="flex-auto">
-            <a href="#岳麓山文史">岳麓山文史</a>
+            <span class="text-lg">岳麓山文史</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
           <li :class="{ active: active === 2 }" @click="scrollTo(2)" class="flex-auto">
-            <a href="#合作区概览">合作区概览</a>
+            <span class="text-lg">走进合作区</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
           <li :class="{ active: active === 3 }" @click="scrollTo(3)" class="flex-auto">
-            <a href="#走进合作区">走进合作区</a>
+            <span class="text-lg">日程安排</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
           <li :class="{ active: active === 4 }" @click="scrollTo(4)" class="flex-auto">
-            <a href="#日程安排">日程安排</a>
+            <span class="text-lg">发起人来了</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
           <li :class="{ active: active === 5 }" @click="scrollTo(5)" class="flex-auto">
-            <a href="#发起人来了">发起人来了</a>
+            <span class="text-lg">大咖论道</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
           <li :class="{ active: active === 6 }" @click="scrollTo(6)" class="flex-auto">
-            <a href="#大咖论道">大咖论道</a>
+            <span class="text-lg">第二现场</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
           <li :class="{ active: active === 7 }" @click="scrollTo(7)" class="flex-auto">
-            <a href="#第二现场">第二现场</a>
+            <span class="text-lg">论坛动态</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
           <li :class="{ active: active === 8 }" @click="scrollTo(8)" class="flex-auto">
-            <a href="#论坛动态">论坛动态</a>
+            <span class="text-lg">高清现场</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
           <li :class="{ active: active === 9 }" @click="scrollTo(9)" class="flex-auto">
-            <a href="#高清现场">高清现场</a>
+            <span class="text-lg">关于我们</span>
           </li>
-          <!-- <li class="text-gray-200">/</li> -->
-          <li :class="{ active: active === 10 }" @click="scrollTo(10)" class="flex-auto">
-            <a href="#关于我们">关于我们</a>
-          </li>
-          <!-- <li>
-            <a href="#" class="cta bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white font-semibold">Sign Up</a>
-          </li> -->
         </ul>
       </div>
 
@@ -130,37 +123,34 @@
 
         <ul class="divide-y font-sans">
           <li @click="scrollTo(0, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#">首页</a>
+            <a class="my-4 inline-block">首页</a>
           </li>
           <li @click="scrollTo(1, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#岳麓山文史">岳麓山文史</a>
+            <a class="my-4 inline-block">岳麓山文史</a>
           </li>
           <li @click="scrollTo(2, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#合作区概览">合作区概览</a>
+            <a class="my-4 inline-block">走进合作区</a>
           </li>
           <li @click="scrollTo(3, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#走进合作区">走进合作区</a>
+            <a class="my-4 inline-block">日程安排</a>
           </li>
           <li @click="scrollTo(4, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#日程安排">日程安排</a>
+            <a class="my-4 inline-block">发起人来了</a>
           </li>
           <li @click="scrollTo(5, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#发起人来了">发起人来了</a>
+            <a class="my-4 inline-block">大咖论道</a>
           </li>
           <li @click="scrollTo(6, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#大咖论道">大咖论道</a>
+            <a class="my-4 inline-block">第二现场</a>
           </li>
           <li @click="scrollTo(7, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#第二现场">第二现场</a>
+            <a class="my-4 inline-block">论坛动态</a>
           </li>
           <li @click="scrollTo(8, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#论坛动态">论坛动态</a>
+            <a class="my-4 inline-block">高清现场</a>
           </li>
           <li @click="scrollTo(9, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#高清现场">高清现场</a>
-          </li>
-          <li @click="scrollTo(10, true)" class="flex-auto">
-            <a class="my-4 inline-block" href="#关于我们">关于我们</a>
+            <a class="my-4 inline-block">关于我们</a>
           </li>
           <!-- <li>
             <a href="#" class="cta bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white font-semibold">Sign Up</a>

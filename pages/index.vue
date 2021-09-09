@@ -17,8 +17,6 @@
 
         <YueluMount />
 
-        <ArticleTitle titleChinese="合作区概览" titleEnglish="Enter the cooperation zone" />
-
         <ArticleTitle titleChinese="走进合作区" titleEnglish="Enter the cooperation zone" />
 
         <CooperationZoon />
@@ -27,11 +25,11 @@
         <Schedule />
 
         <ArticleTitle titleChinese="发起人来了" titleEnglish="Originator is coming" />
-        <Originator />
+        <Originator postType="originator" />
 
         <ArticleTitle titleChinese="大咖论道" titleEnglish="Important Person" />
 
-        <Originator />
+        <Originator postType="important-person" />
         <ArticleTitle titleChinese="第二现场" titleEnglish="Second scene" />
         <ArticleTitle titleChinese="论坛动态" titleEnglish="Forum dynamics" />
         <News />

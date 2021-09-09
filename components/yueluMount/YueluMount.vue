@@ -43,7 +43,7 @@ export default {
   },
   async mounted() {
     this.loading = true
-    this.posts = await this.fetchPosts()
+    this.posts = await this.fetchPosts('yuelu-history')
     this.loading = false
   },
   methods: {
