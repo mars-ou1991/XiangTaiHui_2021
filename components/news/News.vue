@@ -31,8 +31,8 @@
     </div>
     <div class="">
       <ul class="">
-        <li v-for="(item, index) in news" :key="index" class="px-4 py-2 mb-2 bg-gray-100">
-          <h3 class="">
+        <li v-for="(item, index) in posts" :key="index" class="px-4 py-2 mb-2 bg-gray-100">
+          <h3 class="truncate">
             <a href="" class="text-blue-700">{{ item.title }}</a>
           </h3>
           <p class="mt-1 dark:text-primary-400 mb-0 truncate">{{ item.description }}</p>
@@ -86,8 +86,8 @@ export default {
   },
   async mounted() {
     this.loading = true
-    this.posts = await this.fetchPosts('news')
-    this.news = await this.fetchPosts('blog')
+    this.posts = await this.fetchPosts('news', 5)
+    // this.news = await this.fetchPosts('news')
     this.loading = false
   },
   methods: {

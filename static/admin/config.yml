@@ -96,7 +96,7 @@ collections:
           name: 'category',
           widget: 'select',
           default: 'animals',
-          options: [{ label: '头条新闻', value: 'topNews' }, { label: '活动报道', value: 'eventNews' }, { label: '媒体报道', value: 'news' }],
+          options: [{ label: '封面故事', value: 'coverStory' }, { label: '头条新闻', value: 'topNews' }, { label: '活动报道', value: 'eventNews' }, { label: '媒体报道', value: 'news' }],
         }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
