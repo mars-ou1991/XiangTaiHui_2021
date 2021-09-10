@@ -31,6 +31,13 @@
 
         <Originator postType="important-person" />
         <ArticleTitle titleChinese="第二现场" titleEnglish="Second scene" />
+        <iframe
+          frameborder="0"
+          width="100%"
+          height="600"
+          src="https://v.qq.com/txp/iframe/player.html?vid=g3274e2l99l"
+          allowFullScreen="true"
+        ></iframe>
         <ArticleTitle titleChinese="论坛动态" titleEnglish="Forum dynamics" />
         <News />
 
@@ -42,13 +49,6 @@
         <AboutUs />
       </div>
     </client-only>
-
-    <FooterContent />
-
-    <section class="mt-8">
-      <h3 class="text-primary-600 dark:text-primary-400 max-w-5xl mx-auto">Latest blog post</h3>
-      <posts post-type="blog" :amount="1" />
-    </section>
   </main>
 </template>
 
@@ -89,8 +89,9 @@ main {
 }
 .banner-1 {
   height: 100%;
-  background: url('~static/banner-1.png') center;
-  background-size: cover;
+  background: url('~static/banner-1.png') center no-repeat;
+  background-size: contain;
+  background-color: #0d4592;
 }
 
 .swiper {

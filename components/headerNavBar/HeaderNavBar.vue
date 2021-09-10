@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between">
       <!-- Header logo -->
       <div>
-        <img src="~static/logo.png" class="h-12" alt="" />
+        <nuxt-link to="/"><img src="~static/logo.png" class="h-12" alt="" /></nuxt-link>
       </div>
 
       <!-- Mobile toggle -->
@@ -123,34 +123,34 @@
 
         <ul class="divide-y font-sans">
           <li @click="scrollTo(0, true)" class="flex-auto">
-            <a class="my-4 inline-block">首页</a>
+            <span class="my-4 inline-block">首页</span>
           </li>
           <li @click="scrollTo(1, true)" class="flex-auto">
-            <a class="my-4 inline-block">岳麓山文史</a>
+            <span class="my-4 inline-block">岳麓山文史</span>
           </li>
           <li @click="scrollTo(2, true)" class="flex-auto">
-            <a class="my-4 inline-block">走进合作区</a>
+            <span class="my-4 inline-block">走进合作区</span>
           </li>
           <li @click="scrollTo(3, true)" class="flex-auto">
-            <a class="my-4 inline-block">日程安排</a>
+            <span class="my-4 inline-block">日程安排</span>
           </li>
           <li @click="scrollTo(4, true)" class="flex-auto">
-            <a class="my-4 inline-block">发起人来了</a>
+            <span class="my-4 inline-block">发起人来了</span>
           </li>
           <li @click="scrollTo(5, true)" class="flex-auto">
-            <a class="my-4 inline-block">大咖论道</a>
+            <span class="my-4 inline-block">大咖论道</span>
           </li>
           <li @click="scrollTo(6, true)" class="flex-auto">
-            <a class="my-4 inline-block">第二现场</a>
+            <span class="my-4 inline-block">第二现场</span>
           </li>
           <li @click="scrollTo(7, true)" class="flex-auto">
-            <a class="my-4 inline-block">论坛动态</a>
+            <span class="my-4 inline-block">论坛动态</span>
           </li>
           <li @click="scrollTo(8, true)" class="flex-auto">
-            <a class="my-4 inline-block">高清现场</a>
+            <span class="my-4 inline-block">高清现场</span>
           </li>
           <li @click="scrollTo(9, true)" class="flex-auto">
-            <a class="my-4 inline-block">关于我们</a>
+            <span class="my-4 inline-block">关于我们</span>
           </li>
           <!-- <li>
             <a href="#" class="cta bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white font-semibold">Sign Up</a>
@@ -166,8 +166,14 @@ export default {
   data() {
     return {
       isOpen: false,
-      active: 0,
+      active: this.$route.path == '/' ? 0 : -1,
     }
+  },
+  watch: {
+    // eslint disable next line
+    '$route.path': function () {
+      // console.log(222)
+    },
   },
   created() {
     if (process.browser) {

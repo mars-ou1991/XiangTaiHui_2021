@@ -1,15 +1,15 @@
 <template>
   <div class="h-400">
     <swiper ref="mySwiper" class="swiper h-full" :options="swiperOption" v-if="!loading">
-      <swiper-slide :index="index" v-for="(post, index) in posts" :key="index">
+      <swiper-slide :index="index" v-for="(post, index) in posts" :key="index" autoplay>
         <article
           class="relative h-full bg-no-repeat bg-cover bg-center"
           :style="{ 'background-image': `url('${post.cover}')` }"
         >
           <div class="bg-gradient-to-t px-4 py-3 pt-10 absolute bottom-0 from-blue-900 via-blue-900 w-full">
-            <h3 class="text-white">{{ post.title }}</h3>
+            <LinkPost :post="post" />
             <div class="bg-gradient-to-r from-blue-300 h-1 w-1/2"></div>
-            <p class="mt-1 text-white dark:text-primary-400 mb-0">{{ post.description }}</p>
+            <p class="mt-1 text-white dark:text-primary-400 mb-0 truncate">{{ post.description }}</p>
           </div>
         </article>
       </swiper-slide>
@@ -26,6 +26,8 @@ export default {
     return {
       swiperOption: {
         loop: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
         slidesPerView: 4,
         slidesPerGroup: 4,
         spaceBetween: 10,
@@ -42,7 +44,6 @@ export default {
     postType: {
       type: String,
       default: 'projects',
-      validator: (val) => ['blog', 'projects'].includes(val),
     },
     amount: {
       // ? https://content.nuxtjs.org/fetching#limitn
