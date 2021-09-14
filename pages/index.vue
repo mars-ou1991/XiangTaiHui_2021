@@ -1,7 +1,7 @@
 <template>
   <main>
     <client-only>
-      <div class="banner-wrap sm:h-300 md:h-500 lg:h-600 xl:h-700">
+      <div class="banner-wrap h-400 sm:h-400 md:h-500 lg:h-600 xl:h-700">
         <swiper ref="mySwiper" class="swiper h-full" :options="swiperOption">
           <swiper-slide class="banner-1"> </swiper-slide>
           <swiper-slide class="banner-1"> </swiper-slide>
@@ -11,7 +11,7 @@
         </swiper>
       </div>
 
-      <div class="text-primary-600 dark:text-primary-400 container mx-auto">
+      <div class="text-primary-600 dark:text-primary-400 container mx-auto px-3 md:px-0">
         <ArticleTitle v-show="false" titleChinese="首页" titleEnglish="Enter the cooperation zone" />
         <ArticleTitle titleChinese="岳麓山文史" titleEnglish="Mount Yuelu Culture and History" />
 
@@ -34,7 +34,7 @@
         <iframe
           frameborder="0"
           width="100%"
-          height="600"
+          class="h-400 sm:h-400 md:h-500 lg:h-600 xl:h-700"
           src="https://v.qq.com/txp/iframe/player.html?vid=g3274e2l99l"
           allowFullScreen="true"
         ></iframe>

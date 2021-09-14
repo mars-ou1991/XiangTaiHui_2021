@@ -35,6 +35,24 @@ export default {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+          320: {  //当屏幕宽度大于等于320
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          776: {  //当屏幕宽度大于等于776
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          1000: {  //当屏幕宽度大于等于1000
+            slidesPerView: 3,
+            spaceBetween: 20
+          },
+          1200: {  //当屏幕宽度大于等于1200
+            slidesPerView: 4,
+            spaceBetween: 30
+          }
+        }
       },
       posts: [],
       loading: true,

@@ -1,9 +1,9 @@
 <template>
-  <nav class="fixed w-full px-6 py-2 bg-transparent top-0 z-10 bg-white">
+  <nav class="fixed w-full px-2 py-2 bg-transparent top-0 z-10 bg-white">
     <div class="flex items-center justify-between">
       <!-- Header logo -->
       <div>
-        <nuxt-link to="/"><img src="~static/logo.png" class="h-12" alt="" /></nuxt-link>
+        <nuxt-link to="/"><img src="~static/logo.png" class="h-10 md:h-12" alt="" /></nuxt-link>
       </div>
 
       <!-- Mobile toggle -->

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="">
       <swiper ref="mySwiper" class="swiper h-400" :options="swiperOption" v-if="!loading">
         <swiper-slide :index="index" v-for="(post, index) in news" :key="index">

@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       itemCss:
-        'item sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 text-white flex flex-wrap flex-col content-center justify-center text-center rounded-full bg-gray-300 bg-cover lg:mx-20 md:mx-10 sm:mx-8 my-8',
+        'item w-24 h-24 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 text-white flex flex-wrap flex-col content-center justify-center text-center rounded-full bg-gray-300 bg-cover lg:mx-20 md:mx-10 sm:mx-8 mx-3 my-4 md:my-8',
       chinaMap: require('@/static/china-map.png'),
       hunan: require('@/static/hunan.png'),
       hubei: require('@/static/hubei.png'),

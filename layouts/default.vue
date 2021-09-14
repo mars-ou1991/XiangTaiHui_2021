@@ -3,7 +3,7 @@
     <!-- <Header /> -->
     <HeaderNavBar />
     <nuxt />
-    <ColorModePicker />
+    <!-- <ColorModePicker /> -->
     <FooterContent class="w-full" />
   </div>
 </template>
