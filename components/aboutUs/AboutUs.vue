@@ -8,13 +8,13 @@
 
     <div class="grid grid-cols-3 gap-4 mt-4">
       <div class="bg-blue-100 py-4">
-        <h4 class="text-blue-600 bg-blue-100 text-center">论坛主旨</h4>
+        <nuxt-link to="/subject/论坛主旨"><h4 class="text-blue-600 bg-blue-100 text-center">论坛主旨</h4></nuxt-link>
       </div>
       <div class="bg-blue-100 py-4">
-        <h4 class="text-blue-600 bg-blue-100 text-center">论坛架构</h4>
+        <nuxt-link to="/subject/论坛架构"><h4 class="text-blue-600 bg-blue-100 text-center">论坛架构</h4></nuxt-link>
       </div>
       <div class="bg-blue-100 py-4">
-        <h4 class="text-blue-600 bg-blue-100 text-center">论坛任务</h4>
+        <nuxt-link to="/subject/论坛任务"><h4 class="text-blue-600 bg-blue-100 text-center">论坛任务</h4></nuxt-link>
       </div>
     </div>
   </div>
