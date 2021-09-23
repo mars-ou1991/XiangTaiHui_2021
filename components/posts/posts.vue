@@ -114,7 +114,7 @@ export default {
   },
   methods: {
     grtCategory(category) {
-      return this.types.filter((item) => item.value === category)[0].label
+      return this.types.filter((item) => item.value === category)[0]?.label
     },
     formatDate(dateString) {
       const date = new Date(dateString)

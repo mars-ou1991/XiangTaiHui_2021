@@ -142,6 +142,13 @@ collections:
     slug: '{{slug}}'
     preview_path: 'cooperation-zone/{{slug}}'
     fields:
+      - {
+          label: 'Project Category',
+          name: 'category',
+          widget: 'select',
+          default: 'animals',
+          options: [{ label: '湖南', value: 'hunan' }, { label: '湖北', value: 'hubei' }, { label: '江西', value: 'jiangxi' }, { label: '广西', value: 'guangxi' }, { label: '四川', value: 'sichuan' }],
+        }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
