@@ -25,44 +25,44 @@
 
       <!-- Navbar -->
       <div class="hidden md:block">
-        <ul class="flex space-x-8 text-sm font-sans">
-          <li :class="{ active: active === 0 }" @click="scrollTo(0)" class="flex-auto">
+        <ul class="flex space-x-8 text-sm font-sans" :class="this.$route.path !== '/' ? 'not-home-page' : ''">
+          <li :class="{ active: active === 0 }" @click="scrollTo(0)" class="flex-auto cursor-pointer">
             <span class="text-lg">首页</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
-          <li :class="{ active: active === 1 }" @click="scrollTo(1)" class="flex-auto">
+          <li :class="{ active: active === 1 }" @click="scrollTo(1)" class="flex-auto cursor-pointer">
             <span class="text-lg">岳麓山文史</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
-          <li :class="{ active: active === 2 }" @click="scrollTo(2)" class="flex-auto">
+          <li :class="{ active: active === 2 }" @click="scrollTo(2)" class="flex-auto cursor-pointer">
             <span class="text-lg">走进合作区</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
-          <li :class="{ active: active === 3 }" @click="scrollTo(3)" class="flex-auto">
+          <li :class="{ active: active === 3 }" @click="scrollTo(3)" class="flex-auto cursor-pointer">
             <span class="text-lg">日程安排</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
-          <li :class="{ active: active === 4 }" @click="scrollTo(4)" class="flex-auto">
+          <li :class="{ active: active === 4 }" @click="scrollTo(4)" class="flex-auto cursor-pointer">
             <span class="text-lg">发起人来了</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
-          <li :class="{ active: active === 5 }" @click="scrollTo(5)" class="flex-auto">
+          <li :class="{ active: active === 5 }" @click="scrollTo(5)" class="flex-auto cursor-pointer">
             <span class="text-lg">大咖论道</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
-          <li :class="{ active: active === 6 }" @click="scrollTo(6)" class="flex-auto">
+          <li :class="{ active: active === 6 }" @click="scrollTo(6)" class="flex-auto cursor-pointer">
             <span class="text-lg">第二现场</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
-          <li :class="{ active: active === 7 }" @click="scrollTo(7)" class="flex-auto">
+          <li :class="{ active: active === 7 }" @click="scrollTo(7)" class="flex-auto cursor-pointer">
             <span class="text-lg">论坛动态</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
-          <li :class="{ active: active === 8 }" @click="scrollTo(8)" class="flex-auto">
+          <li :class="{ active: active === 8 }" @click="scrollTo(8)" class="flex-auto cursor-pointer">
             <span class="text-lg">高清现场</span>
           </li>
           <!-- <li class="text-gray-200">/</li> -->
-          <li :class="{ active: active === 9 }" @click="scrollTo(9)" class="flex-auto">
+          <li :class="{ active: active === 9 }" @click="scrollTo(9)" class="flex-auto cursor-pointer">
             <span class="text-lg">关于我们</span>
           </li>
         </ul>
@@ -212,51 +212,57 @@ export default {
     },
     // 跳转到指定索引的元素
     scrollTo(index, close) {
-      if (close) this.isOpen = false
-      // 获取目标的 offsetTop
-      const targetOffsetTop = document.querySelectorAll('.artic-title')[index].offsetTop
-      // 获取当前 offsetTop
-      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-      // 定义一次跳 50 个像素，数字越大跳得越快，但是会有掉帧得感觉，步子迈大了会扯到蛋
-      const STEP = 50
-      // 判断是往下滑还是往上滑
-      if (scrollTop > targetOffsetTop) {
-        // 往上滑
-        smoothUp()
-      } else {
-        // 往下滑
-        smoothDown()
+      if (this.$route.path !== '/') {
+        this.$router.push('/')
       }
-      // 定义往下滑函数
-      function smoothDown() {
-        // 如果当前 scrollTop 小于 targetOffsetTop 说明视口还没滑到指定位置
-        if (scrollTop < targetOffsetTop) {
-          // 如果和目标相差距离大于等于 STEP 就跳 STEP
-          // 否则直接跳到目标点，目标是为了防止跳过了。
-          if (targetOffsetTop - scrollTop >= STEP) {
-            scrollTop += STEP
-          } else {
-            scrollTop = targetOffsetTop
-          }
-          document.body.scrollTop = scrollTop
-          document.documentElement.scrollTop = scrollTop
-          // 关于 requestAnimationFrame 可以自己查一下，在这种场景下，相比 setInterval 性价比更高
-          requestAnimationFrame(smoothDown)
-        }
-      }
-      // 定义往上滑函数
-      function smoothUp() {
+      
+      setTimeout(() => {
+        if (close) this.isOpen = false
+        // 获取目标的 offsetTop
+        const targetOffsetTop = document.querySelectorAll('.artic-title')[index].offsetTop
+        // 获取当前 offsetTop
+        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+        // 定义一次跳 50 个像素，数字越大跳得越快，但是会有掉帧得感觉，步子迈大了会扯到蛋
+        const STEP = 50
+        // 判断是往下滑还是往上滑
         if (scrollTop > targetOffsetTop) {
-          if (scrollTop - targetOffsetTop >= STEP) {
-            scrollTop -= STEP
-          } else {
-            scrollTop = targetOffsetTop
-          }
-          document.body.scrollTop = scrollTop
-          document.documentElement.scrollTop = scrollTop
-          requestAnimationFrame(smoothUp)
+          // 往上滑
+          smoothUp()
+        } else {
+          // 往下滑
+          smoothDown()
         }
-      }
+        // 定义往下滑函数
+        function smoothDown() {
+          // 如果当前 scrollTop 小于 targetOffsetTop 说明视口还没滑到指定位置
+          if (scrollTop < targetOffsetTop) {
+            // 如果和目标相差距离大于等于 STEP 就跳 STEP
+            // 否则直接跳到目标点，目标是为了防止跳过了。
+            if (targetOffsetTop - scrollTop >= STEP) {
+              scrollTop += STEP
+            } else {
+              scrollTop = targetOffsetTop
+            }
+            document.body.scrollTop = scrollTop
+            document.documentElement.scrollTop = scrollTop
+            // 关于 requestAnimationFrame 可以自己查一下，在这种场景下，相比 setInterval 性价比更高
+            requestAnimationFrame(smoothDown)
+          }
+        }
+        // 定义往上滑函数
+        function smoothUp() {
+          if (scrollTop > targetOffsetTop) {
+            if (scrollTop - targetOffsetTop >= STEP) {
+              scrollTop -= STEP
+            } else {
+              scrollTop = targetOffsetTop
+            }
+            document.body.scrollTop = scrollTop
+            document.documentElement.scrollTop = scrollTop
+            requestAnimationFrame(smoothUp)
+          }
+        }
+      }, this.$route.path !== '/' ? 1000 : 0)
     },
   },
   watch: {
@@ -282,5 +288,11 @@ export default {
 .active {
   border-bottom: solid 2px blue;
   padding-bottom: 4px;
+}
+.not-home-page {
+  .active {
+  border-bottom: solid 2px #fff;
+  padding-bottom: 4px;
+}
 }
 </style>

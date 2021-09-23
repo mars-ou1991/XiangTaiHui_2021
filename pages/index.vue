@@ -4,7 +4,9 @@
       <div class="banner-wrap h-400 sm:h-400 md:h-500 lg:h-600 xl:h-700">
         <swiper ref="mySwiper" class="swiper h-full" :options="swiperOption">
           <swiper-slide class="banner-1"> </swiper-slide>
-          <swiper-slide class="banner-1"> </swiper-slide>
+          <swiper-slide class="banner-2" @click.native="$router.push('cooperation-zone?type=hunan')"> 
+            湖南海峡两岸产业合作区三市片区简介
+          </swiper-slide>
           <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
           <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
           <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
@@ -57,7 +59,9 @@ export default {
   data() {
     return {
       swiperOption: {
-        auto: true,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
         spaceBetween: 30,
         pagination: {
           el: '.swiper-pagination',
@@ -92,6 +96,17 @@ main {
   background: url('~static/banner-1.png') center no-repeat;
   background-size: contain;
   background-color: #0d4592;
+}
+.banner-2 {
+  height: 100%;
+  background-color: #0d4592;
+  font-size: 36px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .swiper {

@@ -71,7 +71,7 @@ export default {
       // ? https://content.nuxtjs.org/fetching#sortbykey-direction
       type: Object,
       default: () => ({
-        key: 'slug',
+        key: 'createdAt',
         direction: 'desc', // you probably want 'asc' here
       }),
       validator: (obj) => typeof obj.key === 'string' && typeof obj.direction === 'string',
@@ -86,6 +86,11 @@ export default {
         { label: '头条新闻', value: 'topNews' },
         { label: '活动报道', value: 'eventNews' },
         { label: '媒体报道', value: 'news' },
+        { label: '湖南', value: 'hunan' }, 
+        { label: '湖北', value: 'hubei' }, 
+        { label: '江西', value: 'jiangxi' }, 
+        { label: '广西', value: 'guangxi' }, 
+        { label: '四川', value: 'sichuan' }
       ],
     }
   },
