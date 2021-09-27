@@ -1,0 +1,1 @@
+.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#526488;z-index:999999}@-webkit-keyframes vueContentPlaceholdersAnimation{to{transform:translate3d(100%,0,0)}}@keyframes vueContentPlaceholdersAnimation{0%{transform:translate3d(-30%,0,0)}to{transform:translate3d(100%,0,0)}}
