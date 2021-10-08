@@ -1,10 +1,10 @@
 <template>
   <carousel-3d width="500" height="320" border="0" autoplay v-if="!loading">
-    <slide :index="index" v-for="(post, index) in posts" :key="index">
+    <slide :index="index" v-for="(post, index) in posts.filter(i => i.cover)" :key="index">
       <article class="relative h-full bg-no-repeat bg-cover" :style="{ 'background-image': `url('${post.cover}')` }">
-        <div class="bg-gradient-to-t px-4 py-3 pt-10 absolute bottom-0 from-blue-900 via-blue-900 w-full">
+        <div class="absolute bottom-0 w-full px-4 py-3 pt-10 bg-gradient-to-t from-blue-900 via-blue-900">
           <LinkPost :post="post" />
-          <p class="mt-1 text-white dark:text-primary-400 mb-0 truncate">{{ post.description }}</p>
+          <p class="mt-1 mb-0 text-white truncate dark:text-primary-400">{{ post.description }}</p>
         </div>
       </article>
     </slide>
@@ -21,7 +21,7 @@ export default {
     amount: {
       // ? https://content.nuxtjs.org/fetching#limitn
       type: Number,
-      default: 10,
+      default: 20,
       validator: (val) => val >= 0 && val < 100,
     },
     sortBy: {

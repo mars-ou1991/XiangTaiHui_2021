@@ -4,7 +4,7 @@
       <nuxt-link :to="`${postType}/${post.slug}`" class="card card--clickable">
         <template>
           <span class="flex-1">
-            <h6 class="inline-block py-1 px-2 mr-1 bg-gray text-white text-sm font-medium rounded-sm">
+            <h6 v-if="grtCategory(post.category)" class="inline-block px-2 py-1 mr-1 text-sm font-medium text-white rounded-sm bg-gray">
               {{ grtCategory(post.category) }}
             </h6>
             <h3 class="card-title">{{ post.title }}</h3>
@@ -19,18 +19,7 @@
               <h3 class="card-title">{{ post.title }}</h3>
               <h6
                 v-if="post.createdAt"
-                class="
-                  self-start
-                  inline-block
-                  mt-0
-                  py-1
-                  px-2
-                  bg-gray
-                  text-white text-base
-                  font-medium
-                  rounded-sm
-                  whitespace-no-wrap
-                "
+                class="self-start inline-block px-2 py-1 mt-0 text-base font-medium text-white whitespace-no-wrap rounded-sm bg-gray"
               >
                 {{ formatDate(post.createdAt) }}
               </h6>
@@ -64,7 +53,7 @@ export default {
     amount: {
       // ? https://content.nuxtjs.org/fetching#limitn
       type: Number,
-      default: 10,
+      default: 80,
       validator: (val) => val >= 0 && val < 100,
     },
     sortBy: {
@@ -112,6 +101,7 @@ export default {
     const type = getParameterByName('type')
     this.loading = true
     this.posts = await this.fetchPosts()
+    console.log(this.posts)
     if (type) {
       this.posts = this.posts.filter((item) => item.category === type)
     }
@@ -128,7 +118,6 @@ export default {
     async fetchPosts(postType = this.postType, amount = this.amount, sortBy = this.sortBy) {
       return this.$content(postType)
         .sortBy(sortBy.key, sortBy.direction)
-        .limit(amount)
         .fetch()
         .catch((err) => console.error(err) || [])
     },

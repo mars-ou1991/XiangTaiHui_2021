@@ -1,41 +1,41 @@
 <template>
   <div>
-    <h4 class="text-primary-600 font-bold text-center text-2xl">海峡两岸产业合作区</h4>
-    <p class="text-primary-600 text-center">CROSS-STRAIT INDUSTRIAL COOPERATION</p>
+    <h4 class="text-2xl font-bold text-center text-primary-600">海峡两岸产业合作区</h4>
+    <p class="text-center text-primary-600">CROSS-STRAIT INDUSTRIAL COOPERATION</p>
     <div
-      class="flex flex-wrap py-6 bg-no-repeat bg-center flex-col bg-contain"
+      class="flex flex-col flex-wrap py-6 bg-center bg-no-repeat bg-contain"
       :style="{ backgroundImage: `url(${chinaMap})` }"
     >
       <div class="flex flex-row justify-center">
-        <nuxt-link to="/cooperation-zone/海峡两岸产业合作区（广西）"
+        <nuxt-link to="/cooperation-zone?type=guangxi"
           ><div :class="itemCss" :style="{ 'background-image': `url(${guangxi})` }">
-            <h4 class="text-white font-bold text-3xl">广西</h4>
+            <h4 class="text-3xl font-bold text-white">广西</h4>
             <strong>Guangxi</strong>
           </div>
         </nuxt-link>
-        <nuxt-link to="/cooperation-zone/海峡两岸产业合作区（湖南）">
+        <nuxt-link to="/cooperation-zone?type=hunan">
           <div :class="itemCss" :style="{ 'background-image': `url(${hunan})` }">
-            <h4 class="text-white font-bold text-3xl">湖南</h4>
+            <h4 class="text-3xl font-bold text-white">湖南</h4>
             <strong>Hunan</strong>
           </div>
         </nuxt-link>
-        <nuxt-link to="/cooperation-zone/海峡两岸产业合作区（江西）">
+        <nuxt-link to="/cooperation-zone?type=jiangxi">
           <div :class="itemCss" :style="{ 'background-image': `url(${jiangxi})` }">
-            <h4 class="text-white font-bold text-3xl">江西</h4>
+            <h4 class="text-3xl font-bold text-white">江西</h4>
             <strong>Jiangxi</strong>
           </div>
         </nuxt-link>
       </div>
       <div class="flex flex-row justify-center">
-        <nuxt-link to="/cooperation-zone/海峡两岸产业合作区（四川）">
+        <nuxt-link to="/cooperation-zone?type=sichuan">
           <div :class="itemCss" :style="{ 'background-image': `url(${sichuan})` }">
-            <h4 class="text-white font-bold text-3xl">四川</h4>
+            <h4 class="text-3xl font-bold text-white">四川</h4>
             <strong>Sichuan</strong>
           </div>
         </nuxt-link>
-        <nuxt-link to="/cooperation-zone/海峡两岸产业合作区（湖北）">
+        <nuxt-link to="/cooperation-zone?type=hubei">
           <div :class="itemCss" :style="{ 'background-image': `url(${hubei})` }">
-            <h4 class="text-white font-bold text-3xl">湖北</h4>
+            <h4 class="text-3xl font-bold text-white">湖北</h4>
             <strong>Hubei</strong>
           </div>
         </nuxt-link>

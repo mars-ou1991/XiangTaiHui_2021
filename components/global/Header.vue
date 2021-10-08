@@ -1,8 +1,8 @@
 <template>
-  <nav class="scrim-bg fixed z-40 top-0 inset-x-0 px-3 bg-white" aria-label="Main Menu">
-    <ul class="flex nav-list items-center">
+  <nav class="fixed inset-x-0 top-0 z-40 px-3 bg-white scrim-bg" aria-label="Main Menu">
+    <ul class="flex items-center nav-list">
       <li>
-        <img src="~static/logo.png" class="h-16" alt="">
+        <!-- <img src="~static/logo.png" class="h-16" alt=""> -->
       </li>
       <li class="flex-auto tc"><nuxt-link to="">首页</nuxt-link></li>
       <li>/</li>
