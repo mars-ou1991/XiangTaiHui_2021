@@ -47,7 +47,10 @@
           src="https://v.qq.com/txp/iframe/player.html?vid=g3274e2l99l"
           allowFullScreen="true"
         ></iframe> -->
-        <img src="~static/comming-soon.png" width="100%" alt="" srcset="">
+        
+        <a href="https://m.voc.com.cn/portal/live/detail#/pc?live=484">
+          <img src="~static/xiangtaihui-news.jpeg" width="100%" alt="" srcset="">
+        </a>
         
         <ArticleTitle titleChinese="论坛动态" titleEnglish="Forum dynamics" />
         <News />
