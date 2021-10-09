@@ -2,13 +2,13 @@
   <section>
     <vue-masonry-wall :items="posts" :options="options">
       <template v-slot:default="{ item }">
-        <div class="h-full bg-no-repeat bg-cover bg-center relative pb-8">
+        <div class="relative h-full pb-8 bg-center bg-no-repeat bg-cover">
           <img :src="item.cover" />
-          <div class="bg-gradient-to-t px-4 py-3 pt-10 absolute bottom-0 from-blue-900 via-blue-900 w-full">
+          <!-- <div class="absolute bottom-0 w-full px-4 py-3 pt-10 bg-gradient-to-t from-blue-900 via-blue-900">
             <LinkPost :post="item" class="text-white truncate" />
-            <div class="bg-gradient-to-r from-blue-300 h-1 w-1/2"></div>
-            <p class="mt-1 text-white dark:text-primary-400 mb-0 truncate">{{ item.description }}</p>
-          </div>
+            <div class="w-1/2 h-1 bg-gradient-to-r from-blue-300"></div>
+            <p class="mt-1 mb-0 text-white truncate dark:text-primary-400">{{ item.description }}</p>
+          </div> -->
         </div>
       </template>
     </vue-masonry-wall>

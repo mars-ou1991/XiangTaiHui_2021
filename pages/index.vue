@@ -56,8 +56,8 @@
         <News />
 
         <ArticleTitle titleChinese="高清现场" titleEnglish="HD scene" />
-        <!-- <Scene /> -->
-        <img src="~static/comming-soon.png" width="100%" alt="" srcset="">
+        <Scene />
+        <!-- <img src="~static/comming-soon.png" width="100%" alt="" srcset=""> -->
 
         <ArticleTitle titleChinese="关于我们" titleEnglish="About Us" />
 
