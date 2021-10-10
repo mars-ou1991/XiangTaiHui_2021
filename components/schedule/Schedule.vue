@@ -33,9 +33,9 @@
       </dt>
       <dd class="p-4 ml-20 bg-gradient-to-r from-white via-white">
         <p>1、长株潭三市产业对接会</p>
-        <strong class="inline-block px-4 py-1 mt-4 bg-blue-100 rounded-sm">地点：湘潭市</strong>
+        <strong class="inline-block px-4 py-1 mt-4 mb-2 bg-blue-100 rounded-sm">地点：湘潭市</strong>
         <p>2、岳阳市电子信息和现代农业产业对接会</p>
-        <strong class="inline-block px-4 py-1 mt-4 bg-blue-100 rounded-sm">地点：岳阳市</strong>
+        <strong class="inline-block px-4 py-1 mt-4 mb-2 bg-blue-100 rounded-sm">地点：岳阳市</strong>
         <P>3、郴州市承接台资企业产业转移合作对接会</P>
         <strong class="inline-block px-4 py-1 mt-4 bg-blue-100 rounded-sm">地点：郴州市</strong>
       </dd>

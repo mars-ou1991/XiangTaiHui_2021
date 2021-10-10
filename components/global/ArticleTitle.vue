@@ -35,7 +35,7 @@ export default {
 a {
   position: absolute;
   right: 0;
-  top: 5rem;
+  top: 5.1rem;
 }
 h2 {
   font-size: 32px;
