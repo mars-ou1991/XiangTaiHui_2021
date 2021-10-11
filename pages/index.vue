@@ -48,7 +48,7 @@
           allowFullScreen="true"
         ></iframe> -->
         
-        <a href="https://m.voc.com.cn/portal/live/detail#/pc?live=484">
+        <a href="https://moment.rednet.cn/live/index.html?liveid=3386">
           <img src="~static/xiangtaihui-news.jpeg" width="100%" alt="" srcset="">
         </a>
         
