@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between">
       <!-- Header logo -->
       <div>
-        <nuxt-link to="/"><img src="~static/logo.png" class="w-0 h-10 md:h-12" alt="" /></nuxt-link>
+        <nuxt-link to="/"><img src="~static/logo.png" class="h-10 md:h-12" alt="" /></nuxt-link>
       </div>
 
       <!-- Mobile toggle -->

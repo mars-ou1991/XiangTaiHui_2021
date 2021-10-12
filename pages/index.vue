@@ -110,7 +110,7 @@ main {
 }
 .banner-1 {
   height: 100%;
-  background: url('~static/banner-1.png') center no-repeat;
+  background: url('~static/banner.png') center no-repeat;
   background-size: contain;
   background-color: #0d4592;
 }
