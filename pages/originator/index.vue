@@ -2,7 +2,10 @@
   <main>
     <section v-if="posts" class="w-full max-w-5xl mx-auto">
       <h1 class="title">发起人</h1>
-      <posts post-type="originator" :amount="10" />
+      <posts post-type="originator" :amount="80" :sortBy="{
+        key: 'sort',
+        direction: 'asc', 
+      }" />
     </section>
   </main>
 </template>

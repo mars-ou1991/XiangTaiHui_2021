@@ -29,14 +29,14 @@
         <ArticleTitle titleChinese="日程安排" titleEnglish="The schedule" />
         <Schedule />
 
-        <ArticleTitle titleChinese="发起人来了" titleEnglish="Originator is coming" />
-        <!-- <Originator postType="originator" /> -->
-        <img src="~static/comming-soon.png" width="100%" alt="" srcset="">
+        <ArticleTitle titleChinese="发起人来了" titleEnglish="Originator is coming" more="/originator" />
+        <Originator postType="originator" />
+        <!-- <img src="~static/comming-soon.png" width="100%" alt="" srcset=""> -->
 
         <ArticleTitle titleChinese="大咖论道" titleEnglish="Important Person" />
 
-        <!-- <Originator postType="important-person" /> -->
-        <img src="~static/comming-soon.png" width="100%" alt="" srcset="">
+        <ImportantPerson postType="important-person" />
+        <!-- <img src="~static/comming-soon.png" width="100%" alt="" srcset=""> -->
 
         
         <ArticleTitle titleChinese="第二现场" titleEnglish="Second scene" />
@@ -110,9 +110,9 @@ main {
 }
 .banner-1 {
   height: 100%;
-  background: url('~static/banner.png') center no-repeat;
+  background: url('~static/banner.jpg') center no-repeat;
   background-size: contain;
-  background-color: #0d4592;
+  background-color: rgb(2, 67, 147);
 }
 .banner-2 {
   height: 100%;
