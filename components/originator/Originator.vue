@@ -66,7 +66,7 @@ export default {
     amount: {
       // ? https://content.nuxtjs.org/fetching#limitn
       type: Number,
-      default: 10,
+      default: 12,
       validator: (val) => val >= 0 && val < 100,
     },
     sortBy: {
