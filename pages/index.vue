@@ -48,8 +48,8 @@
           allowFullScreen="true"
         ></iframe> -->
         
-        <a href="https://moment.rednet.cn/live/index.html?liveid=3386">
-          <img src="~static/xiangtaihui-news.jpeg" width="100%" alt="" srcset="">
+        <a href="https://m.voc.com.cn/portal/live/detail#/?live=499">
+          <img src="~static/zhibo.png" width="100%" alt="" srcset="">
         </a>
         
         <ArticleTitle titleChinese="论坛动态" titleEnglish="Forum dynamics" />
@@ -110,7 +110,7 @@ main {
 }
 .banner-1 {
   height: 100%;
-  background: url('~static/banner.jpg') center no-repeat;
+  background: url('~static/banner.png') center no-repeat;
   background-size: contain;
   background-color: rgb(2, 67, 147);
 }
