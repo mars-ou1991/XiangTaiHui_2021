@@ -55,7 +55,7 @@
         <ArticleTitle titleChinese="论坛动态" titleEnglish="Forum dynamics" />
         <News />
 
-        <ArticleTitle titleChinese="高清现场" titleEnglish="HD scene" />
+        <ArticleTitle titleChinese="高清现场" titleEnglish="HD scene" more="/scene/" />
         <Scene />
         <!-- <img src="~static/comming-soon.png" width="100%" alt="" srcset=""> -->
 

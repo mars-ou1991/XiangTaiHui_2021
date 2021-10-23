@@ -20,6 +20,12 @@ import VueMasonryWall from 'vue-masonry-wall'
 export default {
   name: 'Scene',
   components: { VueMasonryWall },
+  props: {
+    limit: {
+      type: Number,
+      default: 0
+    },
+  },
   data() {
     return {
       options: {
@@ -41,14 +47,14 @@ export default {
   methods: {
     async fetchPosts(
       postType = 'scene',
-      amount = 20,
+      amount = this.limit || 29,
       sortBy = {
-        key: 'slug',
+        key: 'sort',
         direction: 'desc', // you probably want 'asc' here
       }
     ) {
       return this.$content('scene')
-        .sortBy(sortBy.key, sortBy.direction)
+        .sortBy('sort', 'asc')
         .limit(amount)
         .fetch()
         .catch((err) => console.error(err) || [])

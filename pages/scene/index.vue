@@ -2,7 +2,7 @@
   <main>
     <section v-if="posts" class="w-full max-w-5xl mx-auto">
       <h1 class="title">现场</h1>
-      <posts post-type="scene" :amount="10" />
+      <Scene :limit="200" />
     </section>
   </main>
 </template>
